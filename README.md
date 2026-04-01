@@ -134,19 +134,53 @@ course-dev/
 
 ## 🚀 安装方法
 
-### 方式一：复制到 Skills 目录
+### 方式一：Git Clone（推荐）
 
 ```bash
-cp -r course-dev ~/.openclaw/workspace-ai-studio/skills/
+# 进入你的 OpenClaw workspace skills 目录
+cd ~/.openclaw/workspace/skills/
+
+# Clone 仓库
+git clone https://github.com/zilutang-ux/course-dev-skill.git course-dev
 ```
 
-### 方式二：Clone 后复制
+### 方式二：下载 Release 解压
+
+1. 前往 [Releases](https://github.com/zilutang-ux/course-dev-skill/releases) 页面
+2. 下载最新版本的 Source code (zip)
+3. 解压到你的 OpenClaw workspace skills 目录：
+```bash
+unzip course-dev-skill-x.x.x.zip -d ~/.openclaw/workspace/skills/
+mv ~/.openclaw/workspace/skills/course-dev-skill-x.x.x ~/.openclaw/workspace/skills/course-dev
+```
+
+### 方式三：手动下载 SKILL.md
+
+如果只需要核心文件（不包含 references/ 详细资料）：
 
 ```bash
-git clone https://github.com/zilutang-ux/course-dev-skill.git
-cp -r course-dev-skill/SKILL.md ~/.openclaw/workspace-ai-studio/skills/course-dev/
-cp -r course-dev-skill/references ~/.openclaw/workspace-ai-studio/skills/course-dev/
+mkdir -p ~/.openclaw/workspace/skills/course-dev/references
+curl -o ~/.openclaw/workspace/skills/course-dev/SKILL.md \
+  https://raw.githubusercontent.com/zilutang-ux/course-dev-skill/master/SKILL.md
+curl -o ~/.openclaw/workspace/skills/course-dev/references/addie-detail.md \
+  https://raw.githubusercontent.com/zilutang-ux/course-dev-skill/master/references/addie-detail.md
+curl -o ~/.openclaw/workspace/skills/course-dev/references/blockbuster-detail.md \
+  https://raw.githubusercontent.com/zilutang-ux/course-dev-skill/master/references/blockbuster-detail.md
+curl -o ~/.openclaw/workspace/skills/course-dev/references/ttt-guide.md \
+  https://raw.githubusercontent.com/zilutang-ux/course-dev-skill/master/references/ttt-guide.md
+curl -o ~/.openclaw/workspace/skills/course-dev/references/templates.md \
+  https://raw.githubusercontent.com/zilutang-ux/course-dev-skill/master/references/templates.md
 ```
+
+### 验证安装
+
+安装完成后，重启 OpenClaw Gateway 或重新加载配置：
+
+```bash
+openclaw gateway restart
+```
+
+然后你可以在对话中测试：「帮我开发一门XX课程」，Agent 应自动触发 course-dev skill。
 
 ---
 
