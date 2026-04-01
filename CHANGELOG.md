@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-04-01
+
+### Changed
+- **SKILL.md精简**：从451行瘦身至205行，保持核心流程+决策逻辑
+- **触发描述优化**：更"pushy"，覆盖课程开发/设计/培训/课件/评审/诊断等更多场景
+- **增加使用方法**：明确3种典型场景（开发新课/打磨现有/课程评审）的Input/Output
+- **增加输出文件清单**：每个阶段明确输出物
+
+### Added
+- **references/分层架构**：
+  - `addie-detail.md` — ADDIE五阶段完整细节+检查清单
+  - `blockbuster-detail.md` — 大片课天龙八部完整细节
+  - `ttt-guide.md` — 讲师能力模型+磨课SOP
+  - `templates.md` — 所有模板（开场/中场/收场/自检八问/文档模板）
+
 ## [1.0.0] - 2026-04-01
 
 ### Added
